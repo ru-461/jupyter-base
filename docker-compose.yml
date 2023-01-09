@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jupyter-notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./work:/app/work"
+    ports:
+      - 8888:10000
+    command: jupyter-lab --port=10000 --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
