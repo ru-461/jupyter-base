@@ -5,6 +5,8 @@ WORKDIR /app/work/
 RUN apt-get update -y \
   && apt-get upgrade -y
 
+ARG HOME /root
+
 RUN pip install --upgrade pip
 
 RUN pip install jupyterlab \
@@ -12,4 +14,5 @@ RUN pip install jupyterlab \
   black \
   isort \
   jupyterlab-code-formatter \
-  && rm -rf ~/.cache/pip
+  && rm -rf $HOME/.cache/pip
+
