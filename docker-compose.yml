@@ -8,5 +8,5 @@ services:
     volumes:
       - "./work:/app/work"
     ports:
-      - 8888:10000
-    command: jupyter-lab --port=10000 --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
+      - 10000:8888
+    command: jupyter-lab --port=8888 --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
