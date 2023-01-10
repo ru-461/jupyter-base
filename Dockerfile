@@ -5,7 +5,7 @@ WORKDIR /app/work/
 RUN apt-get update -y \
   && apt-get upgrade -y
 
-ARG HOME /root
+ENV HOME /root
 
 RUN pip install --upgrade pip
 
@@ -16,3 +16,5 @@ RUN pip install jupyterlab \
   jupyterlab-code-formatter \
   && rm -rf $HOME/.cache/pip
 
+RUN mkdir $HOME/.jupyter
+COPY ./.jupyter/jupyter_notebook_config.py $HOME/.jupyter/
