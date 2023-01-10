@@ -1,6 +1,6 @@
 FROM python:3.10
 
-WORKDIR /app
+WORKDIR /app/work/
 
 RUN apt-get update -y \
   && apt-get upgrade -y
@@ -8,7 +8,8 @@ RUN apt-get update -y \
 RUN pip install --upgrade pip
 
 RUN pip install jupyterlab \
-  && pip install jupyterlab-language-pack-ja-JP \
-  && pip install black \
-  && pip install isort \
-  && pip install jupyterlab-code-formatter
+  jupyterlab-language-pack-ja-JP \
+  black \
+  isort \
+  jupyterlab-code-formatter \
+  && rm -rf ~/.cache/pip
