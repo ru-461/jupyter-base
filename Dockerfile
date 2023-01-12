@@ -4,19 +4,18 @@ WORKDIR /app/work/
 
 RUN apt-get update -y \
   && apt-get upgrade -y \
+  && apt-get autoremove -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
 ENV HOME /root
 
-RUN pip install --upgrade pip
-
-RUN pip install jupyterlab \
+RUN pip install --upgrade pip \
+  && pip install --no-cache-dir jupyterlab \
   jupyterlab-language-pack-ja-JP \
   black \
   isort \
-  jupyterlab-code-formatter \
-  && rm -rf $HOME/.cache/pip
+  jupyterlab-code-formatter
 
 RUN mkdir $HOME/.jupyter
 COPY ./.jupyter/jupyter_notebook_config.py $HOME/.jupyter/
