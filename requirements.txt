@@ -1,0 +1,9 @@
+# JupyterLab
+jupyterlab
+jupyterlab-language-pack-ja-JP
+jupyterlab-code-formatter
+
+# Other
+pandas
+black
+isort

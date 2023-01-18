@@ -8,12 +8,11 @@ RUN apt-get update -y \
 
 ENV HOME /root
 
+COPY requirements.txt .
+
 RUN pip install --upgrade pip \
-  && pip install --no-cache-dir jupyterlab \
-  jupyterlab-language-pack-ja-JP \
-  black \
-  isort \
-  jupyterlab-code-formatter
+  && pip install --no-cache-dir -r requirements.txt \
+  && rm -rf ~/.cache/pip
 
 RUN mkdir $HOME/.jupyter
 COPY ./.jupyter/jupyter_notebook_config.py $HOME/.jupyter/
