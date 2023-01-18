@@ -1,7 +1,5 @@
 FROM python:3.10
 
-WORKDIR /app/work/
-
 RUN apt-get update -y \
   && apt-get upgrade -y \
   && apt-get autoremove -y \
@@ -19,3 +17,5 @@ RUN pip install --upgrade pip \
 
 RUN mkdir $HOME/.jupyter
 COPY ./.jupyter/jupyter_notebook_config.py $HOME/.jupyter/
+
+WORKDIR /app/work/
