@@ -1,4 +1,4 @@
-# Jupyter-notebook template
+# Jupyter-notebook base-template
 
 Startup templates for the jupyter environment.
 
