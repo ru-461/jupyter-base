@@ -1,6 +1,6 @@
 # Jupyter-notebook base-template
 
-Startup templates for the jupyter environment.
+Startup jupyter template for the jupyter environment.
 
 # How to use
 
