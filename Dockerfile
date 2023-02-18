@@ -17,4 +17,4 @@ RUN pip install --upgrade pip \
 RUN mkdir $HOME/.jupyter
 COPY ./.jupyter/jupyter_notebook_config.py $HOME/.jupyter/
 
-WORKDIR /app/work/
+WORKDIR /app/works/
