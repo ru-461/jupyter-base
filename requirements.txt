@@ -4,6 +4,7 @@ jupyterlab-language-pack-ja-JP
 jupyterlab-code-formatter
 
 ###### Others ######
+ipywidgets
 pandas
 black
 isort
