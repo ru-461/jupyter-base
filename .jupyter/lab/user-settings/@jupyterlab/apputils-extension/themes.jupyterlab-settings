@@ -1,0 +1,10 @@
+{
+    // テーマ
+    // @jupyterlab/apputils-extension:themes
+    // テーママネージャの設定。
+    // *************************************
+
+    // Selected Theme
+    // Application-level visual styling theme
+    "theme": "JupyterLab Dark"
+}
