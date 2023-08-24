@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.11
 
 RUN apt-get update -y \
   && apt-get upgrade -y \
@@ -10,8 +10,7 @@ ENV HOME /root
 
 COPY requirements.txt .
 
-RUN pip install --upgrade pip \
-  && pip install --no-cache-dir -r requirements.txt \
-  && rm -rf ~/.cache/pip
+RUN pip install --no-cache-dir --upgrade pip \
+  && pip install --no-cache-dir -r requirements.txt
 
-WORKDIR /app/works/
+WORKDIR /app/works
