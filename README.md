@@ -7,7 +7,7 @@ Startup jupyter template for the jupyter environment.
 Clone this repository locally and do the following.
 
 ```shell
-docker compose up
+docker compose up -d
 ```
 
 Access [localhost:10000/lab](http://localhost:10000/lab) to your browser.
